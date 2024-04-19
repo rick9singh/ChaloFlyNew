@@ -1,0 +1,43 @@
+<div class="container">
+    <h1 class="header">Categories</h1>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="Search category" [(ngModel)]="searchQuery">
+      <button class="btn btn-primary" (click)="searchCategories()">Search</button>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Sl No.</th>
+          <th>Category Name</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let category of filteredCategories">
+          <td>{{ category.slNo }}</td>
+          <td>
+            <ng-container *ngIf="!category.editMode; else editModeTemplate">
+              {{ category.name }}
+            </ng-container>
+            <ng-template #editModeTemplate>
+              <input type="text" [(ngModel)]="category.name">
+            </ng-template>
+          </td>
+          <td>
+            <label class="switch">
+              <input type="checkbox" [(ngModel)]="category.active">
+              <span class="slider round"></span>
+            </label>
+          </td>
+          <td>
+            <button class="btn btn-sm btn-primary" (click)="toggleEditMode(category)">Edit</button>
+            <button class="btn btn-sm btn-danger" (click)="deleteCategory(category)">Delete</button>
+            <button class="btn btn-sm btn-success" *ngIf="category.editMode" (click)="saveCategoryChanges(category)">Save</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-success mt-3" (click)="addCategory()">Add Category</button>
+  </div>
+  

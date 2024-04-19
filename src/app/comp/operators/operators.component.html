@@ -1,0 +1,46 @@
+<div class="container">
+  <h1 class="header">Operators</h1>
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Search operator" [(ngModel)]="searchQuery">
+    <button class="btn btn-primary" (click)="searchOperators()">Search</button>
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Sl No.</th>
+        <th>Source Type</th>
+        <th>Operator Name</th>
+        <th>Operator Code</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let operator of filteredOperators">
+        <td>{{ operator.slNo }}</td>
+        <td>{{ operator.sourceType }}</td>
+        <td>
+          <ng-container *ngIf="!operator.editMode; else editModeTemplate">
+            {{ operator.operatorName }}
+          </ng-container>
+          <ng-template #editModeTemplate>
+            <input type="text" [(ngModel)]="operator.operatorName">
+          </ng-template>
+        </td>
+        <td>{{ operator.operatorCode }}</td>
+        <td>
+          <label class="switch">
+            <input type="checkbox" [(ngModel)]="operator.status">
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td>
+          <button class="btn btn-sm btn-primary" (click)="toggleEditMode(operator)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteOperator(operator)">Delete</button>
+          <button class="btn btn-sm btn-success" *ngIf="operator.editMode" (click)="saveOperatorChanges(operator)">Save</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-success mt-3" (click)="openAddOperatorDialog()">Add Operator</button>
+</div>

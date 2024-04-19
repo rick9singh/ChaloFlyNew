@@ -1,0 +1,8 @@
+
+html, body {
+    /* Set your desired background color */
+   margin: 0; 
+    padding: 0; 
+   height: 100%; /* Ensure the body takes up the full height of the viewport */
+   
+}

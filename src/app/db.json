@@ -1,0 +1,207 @@
+{
+  "users": [],
+  "admins": [
+    {
+      "id": "0df1",
+      "name": "rahul",
+      "email": "",
+      "state": "",
+      "pincode": "",
+      "country": "India",
+      "city": "",
+      "address": "",
+      "role": "admin",
+      "phoneNumber": "",
+      "password": "",
+      "distributor": "",
+      "bus": false,
+      "flight": false
+    },
+    {
+      "id": "d59f",
+      "name": "rahul",
+      "email": "",
+      "state": "",
+      "pincode": "",
+      "country": "India",
+      "city": "",
+      "address": "",
+      "role": "admin",
+      "phoneNumber": "",
+      "password": "",
+      "distributor": "",
+      "bus": false,
+      "flight": false
+    },
+    {
+      "id": "510f",
+      "name": "rahul",
+      "email": "chaloflyservices@gmail.com",
+      "state": "",
+      "pincode": "",
+      "country": "India",
+      "city": "",
+      "address": "",
+      "role": "admin",
+      "phoneNumber": "",
+      "password": "",
+      "distributor": "",
+      "bus": true,
+      "flight": false
+    }
+  ],
+  "agents": [],
+  "distributors": [
+    {
+      "id": "ad42",
+      "name": "rrrr",
+      "email": "kiran@gmail.com",
+      "state": "",
+      "pincode": "",
+      "country": "",
+      "city": "",
+      "address": "",
+      "role": "distributor",
+      "phoneNumber": "",
+      "password": "",
+      "distributor": "",
+      "bus": false,
+      "flight": false
+    }
+  ],
+  "tech-team": [],
+  "accounts": [
+    {
+      "id": "5cbd",
+      "name": "rahul",
+      "email": "",
+      "state": "",
+      "pincode": "d",
+      "country": "India",
+      "city": "",
+      "address": "",
+      "role": "accounts",
+      "phoneNumber": "",
+      "password": "",
+      "distributor": "",
+      "bus": false,
+      "flight": false
+    }
+  ],
+  "marketing-team": [
+    {
+      "id": "f3e6",
+      "name": "rahul",
+      "email": "",
+      "state": "",
+      "pincode": "",
+      "country": "India",
+      "city": "",
+      "address": "",
+      "role": "marketing-team",
+      "phoneNumber": "",
+      "password": "",
+      "distributor": "",
+      "bus": false,
+      "flight": false
+    }
+  ],
+  "indiaStates": [],
+  "categories": [
+    {
+      "id": "114a",
+      "slNo": 1,
+      "name": "New Category",
+      "status": true,
+      "active": true,
+      "editMode": true
+    },
+    {
+      "id": "d0db",
+      "slNo": 2,
+      "name": "New Category",
+      "status": true
+    }
+  ],
+  "operators": [
+    {
+      "id": "3520",
+      "sourceType": "bus",
+      "operatorName": "Rahul Kumar",
+      "operatorCode": "a68",
+      "status": true,
+      "editMode": true
+    },
+    {
+      "id": "9f19",
+      "sourceType": "bus",
+      "operatorName": "f",
+      "operatorCode": "gg"
+    }
+  ],
+  "buscommission": [
+    {
+      "id": "a455",
+      "category": "agent(6.5)",
+      "operatorName": "gjhjk",
+      "markuptype": "percentage",
+      "markupnumber": "9",
+      "commisiontype": "percentage",
+      "commision": "40",
+      "status": true,
+      "slNo": 1
+    }
+  ],
+  "bankuserdetails": [
+    {
+      "id": "a347",
+      "bankName": "icici",
+      "branch": "jayanagar",
+      "accNo": "07511111011",
+      "accountName": "Richa",
+      "address": "Jayanagar",
+      "ifsc": "ICIC00011",
+      "slNo": 1
+    },
+    {
+      "id": "a6b4",
+      "bankName": "SBI",
+      "branch": "jayanagar",
+      "accNo": "099919991",
+      "accountName": "Rajeev",
+      "address": "marathali",
+      "ifsc": "SBI000435",
+      "slNo": 2
+    },
+    {
+      "id": "febd",
+      "bankName": "Canara",
+      "branch": "jayanagar",
+      "accNo": "89000011122",
+      "accountName": "Manoj Reddy",
+      "address": "HSR",
+      "ifsc": "CAN0030093",
+      "slNo": 3
+    },
+    {
+      "id": "6036",
+      "bankName": "HDFC",
+      "branch": "jayanagar",
+      "accNo": "075111110111",
+      "accountName": "Rahul",
+      "address": "Jayanagar",
+      "ifsc": "HDFC001001",
+      "slNo": 4
+    },
+    {
+      "id": "056b",
+      "bankName": "AXIS BANK",
+      "branch": "jayanagar",
+      "accNo": "92110001001",
+      "accountName": "Meghna Chalofly",
+      "address": "jp nagar",
+      "ifsc": "AXI000110",
+      "slNo": 5
+    }
+  ]
+}

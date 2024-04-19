@@ -1,0 +1,173 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.container-fluid{
+  margin-top: 100px;
+}
+
+.image-section {
+  background: url('../../../assets/imges/bus-image.webp') no-repeat center center;
+  background-size: cover;
+}
+
+.form-section {
+  background: #ffffff;
+  min-height: 100px;
+  /* margin-left: 30px; */
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  margin-left: 25px;
+}
+
+.brand-name {
+  color: #006d5b;
+  font-weight: 800;
+  font-size: 44.59px;
+  line-height: 50.96px;
+}
+
+/* .form-group{
+  border: solid 1px #aaaaaa;
+} */
+
+.form-control {
+ border: solid 1px #aaaaaa;
+  box-shadow: none;
+  border-radius: 10px;
+}
+
+.email-icon, .lock-icon, .eye-icon {
+  position: absolute;
+  margin: 10px;
+  
+}
+
+
+
+.forgot-password {
+  color: #006d5b;
+  font-size: 10px;
+  line-height: 5%;
+
+}
+
+.login-button {
+  background-color: #006d5b;
+  border: none;
+  color: white;
+  padding: 10px;
+  
+  line-height: 5%;
+  justify-self: center;
+    width: 80px;
+    font-size: 12px;
+}
+
+.support-info p {
+  color: #aaaaaa;
+  font-size: 10px;
+  line-height: 5%;
+}
+
+.footer-links a {
+  color: #aaaaaa;
+  font-size: 10px;
+  line-height: 5%;
+}
+
+footer {
+  color: #070707;
+  font-size: 16px;
+  line-height: 26%;
+  background-color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.login-page {
+    background-color: #f9f9f9;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    width: max-content;
+  
+    .image-section {
+      
+      background-image: url('./../../../assets/imges/bus-image.webp');
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .form-section {
+      .brand {
+        color: #006d5b;
+        font-weight: 800;
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+      }
+  
+      .login-form {
+        margin-bottom: 1rem;
+  
+        .form-control {
+          margin-bottom: 1rem;
+          border: none;
+        }
+  
+        .form-text {
+          color: #006d5b;
+        }
+  
+        .btn-primary {
+          background-color: #006d5b;
+          border: none;
+        }
+      }
+  
+      .support {
+        p {
+          color: #aaaaaa;
+          a {
+            color: #006d5b;
+          }
+        }
+      }
+  
+      .footer-links {
+        margin: 2rem 0;
+        a {
+          color: #aaaaaa;
+          margin-right: 1rem;
+  
+          &:hover {
+            color: darken(#aaaaaa, 10%);
+          }
+        }
+      }
+  
+      .copyright {
+        color: #070707;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  
+
+  .btn, .form-control {
+    padding: 0.5rem 1rem;
+  }*/

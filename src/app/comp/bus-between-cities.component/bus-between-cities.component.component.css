@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+   
+}
+.container{
+    background-image: url("../../../assets/imges/image.png");
+}
+
+/* Header styles */
+.second{
+    background: #0E40E7;
+    text-align: left;
+    padding-left: 30px;
+    color: white;
+}
+
+/* Dropdown list styles */
+.sourceCities, .destinationCities {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.sourceCities div, .destinationCities div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sourceCities div:hover, .destinationCities div:hover {
+    background-color: #f0f0f0;
+}
+
+.search-bus{
+    display: inline-flex;
+    height: 50px;
+    margin-top: 75px;
+    border: outset;
+    border-radius: 0px;
+    border-color: #7b7c7e;
+}
+.form{width: 100%;}

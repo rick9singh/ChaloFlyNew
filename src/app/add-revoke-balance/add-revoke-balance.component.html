@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Add/Revoke Agent Balance</h2>
+    <form #balanceForm="ngForm" (ngSubmit)="submitForm(balanceForm)">
+      <div class="mb-2">
+        <label for="addRevokeType" class="form-label">Add/Revoke Type:</label>
+        <select class="form-select" id="addRevokeType" name="addRevokeType" [(ngModel)]="formData.addRevokeType" required>
+          <option value="add">Add</option>
+          <option value="revoke">Revoke</option>
+        </select>
+      </div>
+      <div class="mb-2">
+        <label for="depositType" class="form-label">Deposit Type:</label>
+        <select class="form-select" id="depositType" name="depositType" [(ngModel)]="formData.depositType" required>
+          <option value="cash">Cash</option>
+          <option value="cheque">Cheque</option>
+          <option value="transfers">Transfers</option>
+          <option value="imps">IMPS</option>
+          <option value="neft">NEFT</option>
+        </select>
+      </div>
+      <div class="mb-2">
+        <label for="amount" class="form-label">Amount:</label>
+        <input type="number" class="form-control" id="amount" name="amount" [(ngModel)]="formData.amount" required>
+      </div>
+      <div class="mb-2" style="width: 50%;">
+        <label for="depositDate" class="form-label">Deposit Date:</label>
+        <input type="date" class="form-control" id="depositDate" name="depositDate" [(ngModel)]="formData.depositDate" required>
+      </div>
+      <div class="mb-2">
+        <label for="transactionNumber" class="form-label">Transaction Number:</label>
+        <input type="text" class="form-control" id="transactionNumber" name="transactionNumber" [(ngModel)]="formData.transactionNumber" required>
+      </div>
+      <div class="mb-2">
+        <label for="approvedBy" class="form-label">Approved By:</label>
+        <input type="text" class="form-control" id="approvedBy" name="approvedBy" [(ngModel)]="formData.approvedBy" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  

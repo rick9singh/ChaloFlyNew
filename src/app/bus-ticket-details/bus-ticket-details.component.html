@@ -1,0 +1,46 @@
+<!-- <form [formGroup]="bankTicketDetailsForm">
+    <mat-toolbar color="">
+      <span>Bus/Flight Ticket Details</span>
+      <span class="example-fill-remaining-space"></span>
+    </mat-toolbar>
+    
+    <div *ngIf="isTicket" class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+      <mat-card class="box">
+        <mat-card-header>
+          <mat-card-title>Bus/Flight Ticket Details</mat-card-title>
+        </mat-card-header>
+    
+        <mat-card-content>
+    
+          <mat-radio-group [(ngModel)]='busFlightTypes' aria-label="Select an option" [ngModelOptions]="{standalone: true}">
+            <mat-radio-button  *ngFor="let busFlight of busFlights" [value]="busFlight">
+              {{busFlight}}
+            </mat-radio-button>      
+           </mat-radio-group>
+           
+         <mat-form-field class="example-full-width">
+              <input matInput [(ngModel)]='bookingId' placeholder="Booking Reference Id" formControlName="bookingId">
+          </mat-form-field>
+            
+            <control-messages [control]="f.bookingId" [submitted]="bankTicketDetailsFormSubmitted" [controlName]="'bookingId'"></control-messages>
+        
+          <mat-radio-group [(ngModel)]='selectedOption' aria-label="Select an option" [ngModelOptions]="{standalone: true}">
+           <mat-radio-button [checked]="true" value="Print">Print</mat-radio-button>
+           <mat-radio-button value="Mail">Email</mat-radio-button>
+           <mat-radio-button value="Sms">SMS</mat-radio-button>
+          </mat-radio-group>
+       
+        </mat-card-content>
+        <div class="d-flex align-items-center justify-content-between">      
+          <button mat-stroked-button class="mat-focus-indicator mat-raised-button mat-button-base mat-primary" (click)="getBusTicket()">GetTicketDetails</button>
+          <button mat-stroked-button class="mat-focus-indicator mat-raised-button mat-button-base" title="Share As PDF" (click)="exportAsPDF();"><span class="flaticon-file font-size-20"></span> Export PDF</button>
+        </div>
+      </mat-card>
+    </div>
+    </form>
+    
+    <div id="MyDIv" [innerHtml]="myTemplate">
+    </div>
+     -->
+    <!-- <div class="icon_image " ></div> -->
+    

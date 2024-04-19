@@ -1,0 +1,118 @@
+<!-- <div class="container">
+  <h1 class="header">Bus Commission</h1>
+  <div class="mb-3 d-flex align-items-center">
+    <input type="text" class="form-control me-2" placeholder="Search" [(ngModel)]="searchQuery">
+    <button class="btn btn-primary" (click)="searchOperators()">Search</button>
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Sl No.</th>
+        <th>Category Name</th>
+        <th>Operator Name</th>
+        <th>MarkUp Type</th>
+        <th>MarkUp</th>
+        <th>Commission</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let commission of commissions">
+        <td>{{ commission.slNo }}</td>
+        <td>{{ commission.category}}</td>
+        <td>{{ commission.operatorName }}</td>
+        <td>{{ commission.markuptype }}</td>
+        <td>{{ commission.markupnumber }}</td>
+        <td>{{ commission.commision }}</td>
+        <td>
+          <mat-slide-toggle [(ngModel)]="commission.status" (change)="toggleStatus(commission)">
+          </mat-slide-toggle>
+        </td>
+        <td>
+          <button class="btn btn-sm btn-outline-primary me-2" (click)="toggleEditMode(commission)">
+            <i class="bi bi-pencil"></i>
+          </button>
+          <button class="btn btn-sm btn-outline-danger me-2" (click)="deleteCommission(commission)">
+            <i class="bi bi-trash"></i>
+          </button>
+          <button class="btn btn-sm btn-success" *ngIf="commission.editMode" (click)="saveCommissionChanges(commission)">Save</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-success mt-3" (click)="openAddCommissionDialog()">Add Commission</button>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <h1 class="header">Bus Commission</h1>
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="" [(ngModel)]="searchQuery" name="search">
+    <button class="btn btn-primary" (click)="searchOperators()">Search</button>
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Sl No.</th>
+        <th>Category Name</th>
+        <th>Operator Name</th>
+        <th>MarkUp Type</th>
+        <th>MarkUp</th>
+        <th>commissionType</th>
+        <th>Commission</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let commission of commissions">
+        <td>{{ commission.slNo }}</td>
+        <td>{{ commission.category }}</td>
+        <td>{{ commission.operatorName }}</td>
+        <td>{{ commission.markuptype }}</td>
+        <td>{{ commission.markupnumber }}</td>
+        <td>{{ commission.commisiontype }}</td>
+        <td>{{ commission.commision }}</td>
+        <td>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" [(ngModel)]="commission.status" (change)="toggleStatus(commission)">
+          </div>
+        </td>
+        <td>
+          <button class="btn btn-sm btn-primary" (click)="toggleEditMode(commission)">
+            <i class="bi bi-pencil"></i> <!-- Edit icon -->
+          </button>
+          <button class="btn btn-sm btn-danger" (click)="deleteCommission(commission)">
+            <i class="bi bi-trash"></i> <!-- Delete icon -->
+          </button>
+          <button class="btn btn-sm btn-success" *ngIf="commission.editMode" (click)="saveCommissionChanges(commission)">Save</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-success mt-3" (click)="openAddCommissionDialog()">Add Commission</button>
+</div>

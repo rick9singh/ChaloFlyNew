@@ -1,0 +1,50 @@
+<div class="container">
+    <h1 class="header">User Bank Details</h1>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="" name="search">
+      <button class="btn btn-primary" (click)="searchOperators()">Search</button>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Sl No.</th>
+          <th>Bank Name</th>
+          <th>Account Number </th>
+          <th>Branch</th>
+          <th>Account Name</th>
+          <th>Address</th>
+          <th>IFSC</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bankDetails of userBankDetails">
+          <td>{{ bankDetails.slNo }}</td>
+          <td>{{ bankDetails.bankName }}</td>
+          <td>{{ bankDetails.branch }}</td>
+          <td>{{ bankDetails.accNo }}</td>
+          <td>{{ bankDetails.accountName }}</td>
+          <td>{{ bankDetails.address }}</td>
+          <td>{{ bankDetails.ifsc }}</td>
+          <td>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox"  (change)="toggleStatus(bankDetails)">
+            </div>
+          </td>
+          <td>
+            <button class="btn btn-sm btn-primary" (click)="toggleEditMode(bankDetails,true)">
+              <i class="bi bi-pencil"></i> <!-- Edit icon -->
+            </button>
+            <button class="btn btn-sm btn-danger" (click)="deleteBankDetails(bankDetails)">
+              <i class="bi bi-trash"></i> <!-- Delete icon -->
+            </button>
+            <button class="btn btn-sm btn-success" *ngIf="bankDetails.editMode" (click)="saveCommissionChanges(deleteBankDetails)">Save</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="btn btn-success mt-3" (click)="openAddCommissionDialog(false)">Add Bank Details</button>
+ 
+</div>

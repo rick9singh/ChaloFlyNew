@@ -1,0 +1,52 @@
+<div class="container">
+
+
+
+
+<h2>Find Buses</h2>
+<h2 class="second"> Chalofly</h2>
+<app-nav-bar> </app-nav-bar>
+<form #busSearchForm="ngForm" (ngSubmit)="searchBuses()" class="form" autocomplete="off">
+    <div class="search-bus">
+<input type="text" placeholder="Travel From" [(ngModel)]="model.source" name="source" (input)="filterSourceCities()" (focus)="sourceGetFocus()"/>
+<input type="text" placeholder="Travel To" [(ngModel)]="model.destination" name="destination" (input)="filterDestinationCities()" (focus)="destinationGetFocus()"/>
+<input type="date" placeholder="Choose a date"/>
+<input type="button" placeholder="Search" value="Search" class="search-btn" style="background: #D74F57;
+;"/>
+</div>
+<div *ngIf="model.source.length!=0 && showSourceModel" class="sourceCities">
+    <div *ngFor="let s of sourceCities" (click)="submitSource(s)">{{s.CityName}}
+        <!-- <button *ngFor="let s of sourceCities" (click)="submitSource(s)">{{s.CityName}}</button> -->
+    </div>   
+</div>
+<div *ngIf="model.destination.length!=0 && showDestinationModel" class="destinationCities">
+    <div *ngFor="let d of destinationCities" (click)="submitDestination(d)">
+        {{d.CityName}}
+    </div>
+    <!-- <button *ngFor="let d of destinationCities" (click)="submitDestination(d)">{{d.CityName}}</button> -->
+</div>
+
+
+</form>
+<img src="../../../assets/imges/image.png" style="    height: 300px;
+width: -webkit-fill-available;">
+
+
+
+
+</div>
+
+
+
+
+<!-- <div>
+    <div class="busData" *ngFor="let bus of busesData.AvailableBuses">
+        <div class="grid">
+            <div class="g-col-4">{{bus.OperatorName}} ({{bus.BusType}})</div>
+            <div class="g-col-2">{{bus.DepartureTime}}</div>
+            <div class="g-col-2">{{bus.ArrivalTime}}</div>
+            <div class="g-col-2">{{bus.Fare}}</div>
+            <div class="g-col-2">{{bus.AvailableSeats}}</div>
+          </div>
+    </div>
+</div> -->

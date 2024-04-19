@@ -1,0 +1,48 @@
+<h2 mat-dialog-title *ngIf="!isEdit">Add Bank details</h2>
+<h2 mat-dialog-title *ngIf="isEdit">Update Bank details</h2>
+<div mat-dialog-content>
+  <form #bankDetailsForm="ngForm" (ngSubmit)="saveData()">
+  <div class="form-group">
+    <label for="bankName">Bank Name:</label>
+    <input type="text" id="bankName" class="form-control" [(ngModel)]="formData.bankName" name="bankName">
+
+  </div>
+  <div class="form-group">
+    <label for="branch">Branch Name:</label>
+    <input type="text" id="branch" class="form-control" [(ngModel)]="formData.branch" name="branch">
+  </div>
+  <div class="form-group">
+    <label for="accNo">Account Number:</label>
+    <input type="text" id="accNo" class="form-control" [(ngModel)]="formData.accNo" name="accNo">
+  
+  </div>
+
+  <div class="form-group">
+    <label for="accountName">Name:</label>
+    <input type="text" id="accountName" class="form-control" [(ngModel)]="formData.accountName" name="accountName">
+  </div>
+
+
+  <div class="form-group">
+    <label for="address">Address:</label>
+    <input type="text" id="address" class="form-control" [(ngModel)]="formData.address" name="address">
+  </div>
+
+  <div class="form-group">
+    <label for="ifsc">IFSC:</label>
+    <input type="text" id="ifsc" class="form-control" [(ngModel)]="formData.ifsc" name="ifsc">
+  </div>
+
+  <!-- <label class="switch">
+    <input type="checkbox" [(ngModel)]=formData.active">
+    <span class="slider round"></span>
+  </label> -->
+
+
+
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="formData" type="submit"*ngIf="!isEdit">Save</button>
+  <button mat-button [mat-dialog-close]="formData" type="submit" *ngIf="isEdit">Update</button>
+  <button mat-button (click)="onCancelClick()" type="button">Cancel</button>
+</div>
+</form>

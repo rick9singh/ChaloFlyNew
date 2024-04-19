@@ -1,0 +1,120 @@
+<div class="registration-container" >
+    <h2 style="   margin-top: 200px;
+    ">Registration</h2>
+    <form class="registration-form" #registrationForm="ngForm" (ngSubmit)="register(registrationForm)">
+      <div>
+        <label>Name:</label>
+        <input type="text" name="name" #name="ngModel" [(ngModel)]="formData.name" required>
+      </div>
+      <div>
+        <label>Email:</label>
+        <input type="email" name="email" #email="ngModel"[(ngModel)]="formData.email" required>
+      </div>
+      <div>
+        <label for="country">Country:</label>
+        <select name="country" id="country" #country="ngModel" [(ngModel)]="formData.country" (change)="onCountryChange()">
+          <option value="">Select Country</option>
+          <option value="India">India</option> <!-- Add other country options as needed -->
+          <!-- Add more country options here -->
+        </select>
+      </div>
+      <div>
+      <div *ngIf="formData.country === 'India'">
+        <label for="state">State:</label>
+        <ng-multiselect-dropdown
+          [placeholder]="'Select State'"
+          [data]="indiaStates"
+          [(ngModel)]="formData.state" name="state"
+          [settings]="dropdownSettings"
+          [disabled]="false">
+        </ng-multiselect-dropdown>
+      </div>
+      
+  
+      
+
+        
+        <div>
+
+        <label>Pincode:</label>
+        <input type="text" name="pincode" #pincode="ngModel"[(ngModel)]="formData.pincode" required>
+      </div>
+
+      <div>
+
+        <label>city:</label>
+        <input type="text" name="city" #city="ngModel"[(ngModel)]="formData.city" required>
+      </div>
+
+      <div>
+
+        <label>address:</label>
+        <input type="text" name="address" #address="ngModel" [(ngModel)]="formData.address" required>
+      </div>
+
+      
+      <div>
+        <label>Role:</label>
+        <select name="role" #role="ngModel" [(ngModel)]="formData.role" required>
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+          <option value="agent">Agent</option>
+        <option value="distributor">Distributor</option>
+        <option value="tech-team">Tech Team</option>
+        <option value="accounts">Accounts</option>
+        <option value="marketing-team">Marketing Team</option>
+        </select>
+      </div>
+
+
+      <div *ngIf="formData.role === 'agent'">
+        <label for="distributor">Distributor:</label>
+        <select name="distributor" id="distributor" #distributor="ngModel"[(ngModel)]="formData.distributor">
+          <option value="">Select Distributor</option>
+           Populate distributor options dynamically 
+          <option *ngFor="let distributor of distributors" [value]="distributor.email">{{ distributor.email }}</option>
+        </select>
+      </div>
+
+
+
+      <div>
+        <label>Phone Number:</label>
+        <input type="text" name="phoneNumber" #phoneNumber="ngModel" [(ngModel)]="formData.phoneNumber" required>
+      </div>
+      <div>
+        <label>Pan Card:</label>
+        <input type="text" name="panCard" #panCard="ngModel" [(ngModel)]="formData.pancard" required>
+      </div>
+
+      
+      <div>
+        <label>Company Name:</label>
+        <input type="text" name="companyName" #companyName="ngModel"[(ngModel)]="formData.companyName" required>
+      </div>
+
+      
+      <div>
+        <label for="transport">Choose Transport:</label>
+        <div class="transport-checkbox">
+          <input type="checkbox" id="transportCheckbox" (change)="toggleTransportOptions()">
+          <label for="transportCheckbox">Select Transport Options</label>
+          <div class="transport-options" *ngIf="showTransportOptions">
+            <label><input type="checkbox" name="bus" [(ngModel)]="formData.bus"> Bus</label>
+            <label><input type="checkbox" name="flight" [(ngModel)]="formData.flight"> Flight</label>
+            <!-- Add more options as needed  -->
+          </div>
+
+
+      <div>
+         <label>Password:</label>
+        <input type="password" name="password"  [(ngModel)]="formData.password" required>
+      </div>
+      <div>
+        <label>GST:</label>
+        <input type="text" name="gst" [(ngModel)]="formData.gst" required>
+      </div>
+      <button type="submit">SignUp</button>
+    
+  </div>
+  
